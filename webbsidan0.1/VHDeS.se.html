@@ -1,0 +1,50 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="VHDes.CSS">
+</head>
+<body>
+<h1>vällkomna till vi Hyr Dig en elScooter</h1>
+    <form id="myForm">
+        <label for="användarnamn"> användarnamn:</label>
+        <input type="text" id=" användarnamn" name=" användarnamn">
+        <br>
+        <label for="lösenord">kod:</label>
+        <input type="password" id="lösenord" name="lösenord">
+        <br>
+        <input type="submit" value="loga in">
+
+</form>
+
+    <script>
+        let username = null;
+        const form = document.getElementById('myForm');
+
+        form.addEventListener('submit', function (event){
+            event.preventDefault();
+            
+    
+            const text = document.getElementById(' användarnamn').value;
+            const lösenord= document.getElementById('lösenord').value;
+            
+          
+            console.log(text + lösenord);
+            
+           
+            if(text == "fariba" && lösenord == "java"){
+                 användarnamn = text;
+                
+                window.location.href = `andrasida.html?username=${encodeURIComponent(användarnamn)}`;
+            }
+            else{
+                alert("Fel användarnamn eller lösenord!");
+            }
+        });
+    </script>
+</body>
+</html>
+    
+   
