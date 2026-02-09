@@ -3,8 +3,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="VHDes.CSS">
 </head>
 <body>
+    <h1> Vi Hyr Dig en elScooter</h1>
+    <p id="statusText"> Ingen elscooter hyrd</p>
+
+    <button onclick="rentScooter()"> hyr elScooter</button>
+    <button onclick="rentScooter()"> Avsluta hyrning</button>
+
+    <p id="rentalInfo"></p>
+
+    <script>
+    let loggedInUsername = fariba;
+
+    let scooterRented = false;
+    let rentalStartTime;
+
+    document.getAnimations("vällkonma").innerText =
+    "vällkomna" + loggedInUsername;
+
+    function rentScooter () {
+        if (scooterRented) return;
+        
+        scooterRented = true;
+        rentalStartTime = new Date();
+
+        document.getElementById(statusText).innerText =
+        "Elscooter är hyrd";
+        document.body.classList.add(rented);
+    }
+
+
+
+
+
+    </script>
+
+   
     
+   
+   
 </body>
 </html>
